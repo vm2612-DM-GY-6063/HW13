@@ -1,17 +1,21 @@
-# HW13 Template
+# Dynamic Dot Grid with Serial Communication
 
-Arduino reads a button on pin 2 and a potentiometer on pin A0 and passes those values on to the p5js sketch via a Serial connection.
+## Overview
 
-The object that is created and sent to p5js looks like this:
+This project creates a **dynamic grid of dots** uses HW3A, where the size of the large dots can be controlled using **serial communication** input. It integrates Arduino that sends analog values.
 
-```
-data = {
-  A0: { value: integer },
-  D2: {
-    isPressed: boolean,
-    count: integer
-  }
-}
-```
+- **A0**: Controls the size of large dots.  
 
-In p5js `A0.value` is used to change ellipse size, `D2.isPressed` is used to add new ellipses to an array and `D2.count` is used to change the color of new ellipses.
+
+## Features
+
+- **Dynamic Grid**:  
+   - Alternating rows of large and small dots.  
+   - Grid updates in real-time based on serial data.  
+- **Serial Integration**:  
+   - Connects to a microcontroller via serial communication.  
+   - Continuously requests and reads data.  
+- **Interactive Visuals**:  
+   - Large dot size (`A0`) dynamically mapped between 10–100 pixels.  
+
+
